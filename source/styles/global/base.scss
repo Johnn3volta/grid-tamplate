@@ -1,0 +1,118 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body{
+  font-family: $ff-main;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #333333;
+}
+
+*,*:before,*:after{
+  box-sizing: inherit;
+}
+
+ol,ul {
+  list-style-type: none;
+}
+
+.clearfix{
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 $gutter;
+}
+
+.img-responsive{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.grid{
+  display: grid;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  background-color: $accent;
+  padding: 10px 60px;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .3s ease;
+  cursor: pointer;
+
+  &:after {
+    transition: background-color .2s ease;
+    position: absolute;
+    content: '';
+    height: 4px;
+    bottom: 0;
+    width: 100%;
+    background-color: darken($accent, 50%);
+    opacity: .18;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    left: 0;
+  }
+
+  &:focus, &:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  &:hover {
+    background-color: lighten($accent, 5%);
+
+    &:after {
+      opacity: .22;
+    }
+  }
+
+  &:active {
+    background-color: darken($accent, 5%);
+
+    &:after {
+      opacity: .32;
+    }
+  }
+
+  &.button-grey {
+    background-color: $gray;
+
+    &:hover {
+      background-color: lighten($gray, 5%);
+      &:after{
+        opacity: .22;
+      }
+    }
+
+    &:after {
+      background-color: darken($gray, 15%);
+    }
+
+    &:active{
+      background-color: darken($gray, 5%);
+      &:after{
+        opacity: .32;
+      }
+    }
+
+  }
+}

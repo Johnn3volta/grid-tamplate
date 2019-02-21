@@ -1,0 +1,14 @@
+section.section-blog.landing-section
+  .container
+    h2 Ready To Read Our Hell Blog ?
+    .blog-home.grid
+      - for (var i = 1; i <= 6; i++)
+        a(href="#").blog-item.grid
+          span.blog-item-img(style="background-image:url(images/" + i + ".jpg)")
+          span.blog-item-content.grid
+            h4 We Are Champions At Last Month
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+              doloribus dolorum eaque sequi tempore. Consectetur maiores porro provident...
+      .buttoncase.text-center
+        a.button(href="#") View Blog

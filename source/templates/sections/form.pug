@@ -1,0 +1,8 @@
+section.form-section
+  .container
+    form.grid
+      - for (var i = 0;i<3;i++)
+        div
+          input(type="text" name="name" placeholder="Your name..." autocomplete="off" required)
+      div
+        button.button Yes! ready!

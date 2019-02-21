@@ -1,0 +1,8 @@
+- var i = 1, words = ['Classes', 'MacBook','iMac','Hacking', 'Bull Shit','WorkSpace','Notebook','Code','Timer'];
+section.portfolio-section.grid
+  while i <= 9
+    .portfolio-item.grid(style="background-image:url(images/" + i++ + ".jpg)")
+      span Cool &nbsp;
+        = words[i - 1]
+  .buttoncase.text-center
+    a.button(href="#") View porfolio
